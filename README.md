@@ -4,9 +4,9 @@ Brute force any zip file using zip Brute force tool.
 #### Python
 #### zipfile (module)
 # installation
-#### git clone 
-
-
+#### git clone https://github.com/official-hack4peace/zip-brute-force
+#### cd zip-brute-force
+#### python3 zip-brute-force.py
 # how to use
 #### step 1: install this tool
 #### step 2: run python program
