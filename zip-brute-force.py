@@ -1,0 +1,66 @@
+import zipfile 
+
+  
+
+  
+
+def crack_password(password_list, obj): 
+
+
+    idx = 0
+
+  
+
+    with open(password_list, 'rb') as file: 
+
+        for line in file: 
+
+            for word in line.split(): 
+
+                try: 
+
+                    idx += 1
+
+                    obj.extractall(pwd=word) 
+
+                    print("Password found at line: ", idx) 
+
+                    print("Password is: ", word.decode()) 
+
+                    return True
+
+                except: 
+
+                    continue
+
+    return False
+
+  
+
+  
+password = input("Enter dictionary name: ")
+password_list = (password)
+
+  
+zip-file = input("Enter zip file name: ")
+zip_file = (zip-file)
+
+  
+
+obj = zipfile.ZipFile(zip_file) 
+
+  
+
+cnt = len(list(open(password_list, "rb"))) 
+
+  
+
+print("There are total", cnt, 
+
+      "number of passwords to test") 
+
+  
+
+if crack_password(password_list, obj) == False: 
+
+    print("Error: Password not found")
