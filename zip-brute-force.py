@@ -42,7 +42,7 @@ password = input("Enter dictionary name: ")
 password_list = (password)
 
   
-zip-file = input("Enter zip file name: ")
+zipfile = input("Enter zip file name: ")
 zip_file = (zip-file)
 
   
